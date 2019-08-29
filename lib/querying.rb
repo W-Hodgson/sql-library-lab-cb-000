@@ -14,10 +14,7 @@ def select_name_and_series_subgenres_of_authors
   "SELECT authors.name, subgenres.name FROM authors INNER JOIN series ON series.author_id = authors.id INNER JOIN subgenres ON series.subgenre_id = subgenres.id"
 end
 
-def select_series_title_with_most_human_characters
-  "SELECT name FROM characters WHERE characters.series_id = 1"
-end
 
 def select_character_names_and_number_of_books_they_are_in
-  "Write your SQL query here"
+  "SELECT name FROM characters INNER JOIN character_books ON  characters.id = character_books.character_id"
 end
